@@ -1,0 +1,24 @@
+# function which implements the bubble_sort algorithm for givenlist
+def bubbleSort(givenlist):
+  # finding the length of given list
+    length = len(givenlist)
+    # using nested for loops
+    for i in range(length-1):
+        for j in range(length-i-1):
+          # checking if the jth element is greater than j+1 th element
+            if(givenlist[j] > givenlist[j+1]):
+              # if it is greater then swap the elements
+                givenlist[j], givenlist[j+1] = givenlist[j+1], givenlist[j]
+# given list
+givenlist = [8, 132, 22, 34, 57, 2, 1, 9, 45, 87, 63, 80, 26, 65, 132]
+# printing the list before sorting
+print("printing the list before sorting :")
+for i in givenlist:
+    print(i, end=" ")
+print()
+# passing this given list to bubbleSort function which sorts the given list
+bubbleSort(givenlist)
+# printing the list after sorting
+print("printing the list after sorting :")
+for i in givenlist:
+    print(i, end=" ")
